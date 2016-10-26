@@ -448,11 +448,11 @@ func (c ConnState) String() string {
 
 // ListenAndServe listens on the TCP network address srv.Addr and then
 // calls Serve to handle requests on incoming connections.  If
-// srv.Addr is blank, ":1502" is used.
+// srv.Addr is blank, ":502" is used.
 func (srv *Server) ListenAndServe() error {
 	addr := srv.Addr
 	if addr == "" {
-		addr = ":1502"
+		addr = ":502"
 	}
 	ln, err := net.Listen("tcp", addr)
 	if err != nil {
